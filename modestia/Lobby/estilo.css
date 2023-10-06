@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e2dede;
+    animation: pulseBackground 3s ease-in-out infinite alternate; /* Fundo pulsante */
+}
+
+
+@keyframes pulseBackground {
+    0% {
+        background-color: #e2e2deb6; /* Cor inicial */
+    }
+    100% {
+        background-color: #f2f2f2; /* Cor alternativa */
+    }
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.logo img {
+    max-width: 550px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    opacity: 0; /* Começa com a imagem invisível */
+    animation: fadeIn 1s ease-in-out forwards; /* Adiciona a animação de fade-in */
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa com a opacidade 0 */
+    }
+    to {
+        opacity: 1; /* Termina com a opacidade 1 */
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.rectangle {
+    background-color: #000; /* Retângulos pretos */
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.2s;
+    position: relative; /* Para posicionar a imagem */
+    margin-top: 160px; /* Espaçamento vertical entre os retângulos */
+}
+
+.rectangle i {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fff; /* Ícones em branco */
+}
+
+.rectangle p {
+    margin: 0;
+    color: #fff; /* Texto em branco */
+    margin-top: 8px;
+}
+
+.rectangle .image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.rectangle:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% quando o mouse passa sobre o elemento */
+    transition: transform 0.2s; /* Adiciona uma transição suave de 0.2 segundos */
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ... Your existing CSS code ... */
+
+/* Media Query for Screens with Width <= 1035px */
+@media (max-width: 1035px) {
+    .container {
+        flex-direction: column; /* Stack rectangles vertically */
+        align-items: center; /* Center the rectangles */
+        margin-top: 45px;
+    }
+
+    .rectangle {
+        width: 50%; /* Take the full width of the container */
+        margin-top: 10px; /* Reduce vertical spacing */
+    }
+
+    /* Limit the maximum width of the buttons */
+    .rectangle a {
+        max-width: 200px; /* Set your desired maximum width */
+        margin: 0 auto; /* Center the buttons horizontally */
+    }
+}
+
+@media (max-width: 863px) {
+    .logo img {
+        margin-left: 164px; /* Adjust the margin-left as needed to move the logo to the left */
+    }
+}
+
+@media (max-width: 758px) {
+    .logo img {
+        margin-left: 140px; /* Adjust the margin-left as needed to move the logo to the left */
+    }
+}
+
+
+@media (max-width: 709px) {
+    .logo img {
+        margin-left: 120px; /* Adjust the margin-left as needed to move the logo to the left */
+    }
+}
+
+@media (max-width: 660px) {
+    .logo img {
+        margin-left: 100px; /* Adjust the margin-left as needed to move the logo to the left */
+    }
+}
+
+@media (max-width: 590px) {
+    .logo img {
+        margin-left: 95px; /* Adjust the margin-left as needed to move the logo to the left */
+    }
+}
+
+@media (max-width: 468px) {
+    .logo img {
+        margin-left: 75px; /* Adjust the margin-left as needed to move the logo to the left */
+    }
+}
+
+@media (max-width: 374px) {
+    .logo img {
+        margin-left: 60px; /* Adjust the margin-left as needed to move the logo to the left */
+    }
+}
+
+.rectangle i:hover {
+    transform: rotate(45deg); /* Gira o ícone em 45 graus ao passar o mouse */
+    transition: transform 0.2s; /* Adiciona uma transição suave de transformação */
+}
+
